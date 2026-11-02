@@ -442,14 +442,14 @@ nav a.active {
 /* タイムライン全体 */
 .timeline {
   position: relative;
-  padding-left: 35px;
+  padding-left: 125px;
 }
 
 /* 縦線 */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 8px;
+  left: 99px;
   top: 7px;
   bottom: 7px;
   width: 2px;
@@ -461,6 +461,18 @@ nav a.active {
 .timeline-item {
   position: relative;
   margin-bottom: calc(var(--period, 1) * 20px);
+}
+
+.timeline-date {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 86px;
+  color: var(--sub-color);
+  font-size: 13px;
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
 }
 
 /* 最後の項目の余分な余白をなくす */
@@ -551,11 +563,21 @@ nav a.active {
   }
 
   .timeline {
-    padding-left: 30px;
+    padding-left: 104px;
+  }
+
+  .timeline::before {
+    left: 83px;
   }
 
   .timeline-item::before {
     left: -28px;
+  }
+
+  .timeline-date {
+    top: 20px;
+    width: 70px;
+    font-size: 11px;
   }
 
   .timeline-content {
