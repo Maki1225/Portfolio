@@ -588,3 +588,34 @@ nav a.active {
     font-size: 16px;
   }
 }
+
+/* タイムラインの日付とカードを横並びにする */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* 年月のデザイン */
+.timeline-date {
+  color: var(--sub-color);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  padding-top: 22px;
+  white-space: nowrap;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 650px) {
+  .timeline-item {
+    grid-template-columns: 85px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .timeline-date {
+    font-size: 12px;
+    padding-top: 18px;
+  }
+}
