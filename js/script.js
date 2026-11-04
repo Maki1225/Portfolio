@@ -5,28 +5,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(
     "#about, #history, #works, #skills, #contact"
   );
+
   const navLinks = document.querySelectorAll("nav a");
 
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === "#" + entry.target.id
-          );
-        });
+  function updateActiveNav() {
+    let currentId = "about";
+    const checkPosition = 160;
+
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+
+      if (top <= checkPosition) {
+        currentId = section.id;
       }
     });
-  }, {
-    rootMargin: "-30% 0px -60% 0px"
-  });
 
-  sections.forEach(section => {
-    sectionObserver.observe(section);
-  });
+    // ページの一番下まで来たらCONTACTを選択
+    if (
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 2
+    ) {
+      currentId = "contact";
+    }
 
+    navLinks.forEach(link => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute("href") === "#" + currentId
+      );
+    });
+  }
 
+  window.addEventListener("scroll", updateActiveNav);
+  window.addEventListener("load", updateActiveNav);
+  window.addEventListener("resize", updateActiveNav);
+
+  updateActiveNav();
   // ② ページトップボタン
   const backToTop = document.getElementById("backToTop");
 
