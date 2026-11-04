@@ -619,3 +619,28 @@ nav a.active {
     padding-top: 18px;
   }
 }
+
+/* タイムラインをコンパクトにする */
+.history-section {
+  margin-top: 50px;
+}
+
+.history-subtitle {
+  margin-bottom: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 15px;
+}
+
+.timeline-content {
+  padding: 14px 20px;
+}
+
+.timeline-content h4 {
+  margin-bottom: 4px;
+}
+
+.timeline-content p {
+  line-height: 1.6;
+}
