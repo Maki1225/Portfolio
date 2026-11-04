@@ -699,3 +699,11 @@ footer {
     height: 42px;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#history {
+  scroll-margin-top: 100px;
+}

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ① スクロール連動メニュー
   const sections = document.querySelectorAll(
-    "#about, #works, #skills, #contact"
+    "#about, #history, #works, #skills, #contact"
   );
   const navLinks = document.querySelectorAll("nav a");
 
