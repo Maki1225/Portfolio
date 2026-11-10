@@ -495,40 +495,6 @@ footer {
 }
 
 /* =========================
-   画像拡大表示
-========================= */
-.image-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(70, 50, 50, 0.85);
-  z-index: 300;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-}
-
-.image-modal.show {
-  display: flex;
-}
-
-.image-modal img {
-  max-width: 90%;
-  max-height: 85vh;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-#closeModal {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-/* =========================
    スクロール時のふわっと表示
 ========================= */
 .reveal {
@@ -679,16 +645,6 @@ footer {
   .skill-item {
     padding: 10px 18px;
     font-size: 14px;
-  }
-
-  /* 画像モーダル */
-  .image-modal {
-    padding: 15px;
-  }
-
-  #closeModal {
-    top: 10px;
-    right: 20px;
   }
 
   /* ページトップ */
