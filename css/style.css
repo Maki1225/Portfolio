@@ -794,3 +794,38 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   プロジェクト詳細のデザイン
+========================= */
+
+.project-content h2 {
+  font-size: 28px;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.project-subtitle {
+  color: var(--sub-color);
+  margin-bottom: 30px;
+}
+
+.project-content h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-left: 12px;
+  border-left: 3px solid var(--main-color);
+  color: var(--text-color);
+  font-size: 18px;
+}
+
+.project-content a {
+  color: var(--sub-color);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.project-content a:hover {
+  color: var(--main-color);
+}
