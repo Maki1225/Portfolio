@@ -547,6 +547,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .reveal,
   .page-loader {
     transition: none;
@@ -849,4 +850,80 @@ html {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 55px;
+}
+
+.skill-item {
+  width: 125px;
+  height: 145px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 18px;
+
+  color: var(--text-color);
+  box-shadow: 0 5px 18px rgba(120, 90, 70, 0.08);
+
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-item i,
+.skill-symbol {
+  font-size: 43px;
+  color: var(--sub-color);
+}
+
+.skill-symbol {
+  font-size: 45px;
+}
+
+.skill-item span:last-child {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* マウスを乗せたとき */
+.skill-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(120, 90, 70, 0.15);
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .skills-container {
+    gap: 15px;
+  }
+
+  .skill-item i {
+    font-size: 43px;
+    color: var(--sub-color);
+  }
+
+  .skill-item {
+    color: var(--text-color);
+  }
+
+  .skill-item span:last-child {
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
