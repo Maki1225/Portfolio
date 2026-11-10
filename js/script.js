@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hidePageLoader = () => {
     window.setTimeout(() => {
       pageLoader?.classList.add("is-hidden");
-    }, 3000);
+    }, 1000);
   };
 
   if (document.readyState === "complete") {

@@ -47,7 +47,7 @@ img {
   background-color: var(--pink);
   color: var(--sub-color);
   letter-spacing: 3px;
-  transition: opacity 1s ease, visibility 1s ease;
+  transition: opacity 0.33s ease, visibility 0.33s ease;
 }
 
 .page-loader.is-hidden {
