@@ -388,15 +388,6 @@ nav a.active {
   padding-top: 10px;
 }
 
-.work-card img {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.work-card img:hover {
-  transform: scale(1.03);
-}
-
 .work-card.hidden {
   display: none;
 }
@@ -670,6 +661,12 @@ html {
 
 .work-card {
   cursor: pointer;
+}
+
+.work-card:hover,
+.work-card:focus-visible {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(118, 91, 85, 0.16);
 }
 
 .project-modal {
