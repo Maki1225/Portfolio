@@ -907,6 +907,15 @@ html {
   box-shadow: 0 10px 25px rgba(120, 90, 70, 0.15);
 }
 
+.skill-item[role="button"] {
+  cursor: pointer;
+}
+
+.skill-item[role="button"]:focus-visible {
+  outline: 3px solid var(--sub-color);
+  outline-offset: 4px;
+}
+
 /* スマートフォン */
 @media (max-width: 600px) {
   .skills-container {

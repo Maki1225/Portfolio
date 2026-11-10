@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  document.querySelectorAll(".work-card[data-project]").forEach(card => {
+  document.querySelectorAll(".work-card[data-project], .skill-item[data-project]").forEach(card => {
 
     card.addEventListener("click", () => {
       openProject(card.dataset.project);
