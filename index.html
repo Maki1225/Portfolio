@@ -166,7 +166,7 @@
           </div>
 
           <div class="work-info">
-            <h3>Python Game</h3>
+            <h3>ブラックジャック</h3>
             <p>Pythonを使用して制作したゲーム。</p>
           </div>
 
@@ -233,10 +233,42 @@
       <!-- PROJECT 01 -->
       <div id="audioProject" class="project-content">
         <h2>音声良否判定AI</h2>
+        <p class="project-subtitle">Python / 機械学習 / 音声データ分析</p>
+
+        <h3>Overview</h3>
         <p>
-          Pythonを使用して音声データを分析し、
-          音の良否を判定するアプリです。
+          音声ファイルを読み込み、音の特徴を分析して、
+          正常音と異常音を判定するアプリです。
+          音声データから特徴量を抽出し、機械学習を利用することで、
+          音声の良否を自動で判定できるように制作しました。
         </p>
+
+        <h3>Development</h3>
+        <p>
+          音声データの分析には、MFCC、RMS、スペクトル重心、
+          ゼロ交差率の4種類の特徴量を使用しました。
+          抽出した特徴量をStandardScalerで標準化し、
+          KNN（K近傍法）を用いて正常音と異常音の特徴を学習させました。
+        </p>
+        <p>
+          また、正常音と異常音それぞれの特徴との距離を比較することで、
+          判定結果を表示する仕組みを実装しました。
+          複数の音声ファイルをまとめて選択できる機能や、
+          判定結果をCSV形式で保存できる機能も追加しました。
+        </p>
+
+        <h3>Technologies</h3>
+        <p>
+          Python / Librosa / NumPy / scikit-learn / Tkinter
+        </p>
+
+        <h3>Gallery</h3>
+        <div class="project-gallery">
+          <img src="images/IS-01.png" alt="音声良否判定AIの画面1">
+          <img src="images/IS-02.png" alt="音声良否判定AIの画面2">
+          <img src="images/IS-03.png" alt="音声良否判定AIの画面3">
+          <img src="images/IS-04.png" alt="音声良否判定AIの画面4">
+        </div>
       </div>
 
       <!-- PROJECT 02 -->
@@ -306,10 +338,10 @@
 
         <h3>Gallery</h3>
         <div class="project-gallery">
-          <img src="images/project03-01.png" alt="ブラックジャックの画面1">
-          <img src="images/project03-02.png" alt="ブラックジャックの画面2">
-          <img src="images/project03-03.png" alt="ブラックジャックの画面3">
-          <img src="images/project03-04.png" alt="ブラックジャックの画面4">
+          <img src="images/blackjack-01.png" alt="ブラックジャックの画面1">
+          <img src="images/blackjack-02.png" alt="ブラックジャックの画面2">
+          <img src="images/blackjack-03.png" alt="ブラックジャックの画面3">
+          <img src="images/blackjack-04.png" alt="ブラックジャックの画面4">
           <!-- 後からスクリーンショットを4枚以上追加 -->
         </div>
 
