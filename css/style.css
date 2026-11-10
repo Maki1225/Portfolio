@@ -35,6 +35,46 @@ img {
   max-width: 100%;
 }
 
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--pink);
+  color: var(--sub-color);
+  letter-spacing: 3px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-spinner {
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(184, 143, 145, 0.25);
+  border-top-color: var(--sub-color);
+  border-radius: 50%;
+  animation: loader-spin 0.8s linear infinite;
+}
+
+.page-loader p {
+  font-size: 13px;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* =========================
    ヘッダー
 ========================= */
@@ -500,8 +540,13 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .page-loader {
     transition: none;
+  }
+
+  .loader-spinner {
+    animation: none;
   }
 }
 

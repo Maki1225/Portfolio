@@ -1,6 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  const pageLoader = document.getElementById("pageLoader");
+
+  window.addEventListener("load", () => {
+    pageLoader?.classList.add("is-hidden");
+  }, { once: true });
+
   // ① スクロール連動メニュー
   const sections = document.querySelectorAll(
     "#about, #history, #works, #skills, #contact"
