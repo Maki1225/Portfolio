@@ -3,9 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pageLoader = document.getElementById("pageLoader");
 
-  window.addEventListener("load", () => {
-    pageLoader?.classList.add("is-hidden");
-  }, { once: true });
+  const hidePageLoader = () => {
+    window.setTimeout(() => {
+      pageLoader?.classList.add("is-hidden");
+    }, 1200);
+  };
+
+  if (document.readyState === "complete") {
+    hidePageLoader();
+  } else {
+    window.addEventListener("load", hidePageLoader, { once: true });
+  }
 
   // ① スクロール連動メニュー
   const sections = document.querySelectorAll(
