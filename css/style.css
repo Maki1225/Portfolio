@@ -707,3 +707,11 @@ html {
 #history {
   scroll-margin-top: 100px;
 }
+
+.project-modal {
+  display: none;
+}
+
+.project-modal.show {
+  display: flex;
+}
