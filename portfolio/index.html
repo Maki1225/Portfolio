@@ -221,11 +221,11 @@
 
       <div class="skills-container">
 
-        <div class="skill-item">Python</div>
-        <div class="skill-item">HTML</div>
-        <div class="skill-item">CSS</div>
-        <div class="skill-item">JavaScript</div>
-        <div class="skill-item">GitHub</div>
+        <button class="skill-item" type="button" data-skill="python">Python</button>
+        <button class="skill-item" type="button" data-skill="html">HTML</button>
+        <button class="skill-item" type="button" data-skill="css">CSS</button>
+        <button class="skill-item" type="button" data-skill="javascript">JavaScript</button>
+        <button class="skill-item" type="button" data-skill="github">GitHub</button>
 
       </div>
 
@@ -262,6 +262,43 @@
 
     <img id="modalImage" src="" alt="拡大画像">
 
+  </div>
+
+  <!-- スキル詳細 -->
+  <div id="skillDetailModal" class="skill-detail-modal" role="dialog" aria-modal="true" aria-label="スキル詳細">
+    <div class="skill-detail-content">
+      <button id="closeSkillDetail" class="close-skill-detail" type="button" aria-label="閉じる">
+        ×
+      </button>
+      <div id="pythonSkill" class="skill-detail">
+        <h2>Python</h2>
+        <h3>学習・制作経験</h3>
+        <p>ブラックジャックのゲームや、音声の良否を判定するAIアプリを制作しました。</p>
+        <p>音声アプリでは、音声データから特徴量を取り出し、機械学習で判定する処理に取り組みました。</p>
+        <h3>使用した技術</h3>
+        <p>Librosa / NumPy / scikit-learn / Tkinter</p>
+      </div>
+      <div id="htmlSkill" class="skill-detail">
+        <h2>HTML</h2>
+        <h3>学習・制作経験</h3>
+        <p>Study Plannerやポートフォリオの制作を通して、見出しや文章、リンク、画像を含むWebページの構造を作成しています。</p>
+      </div>
+      <div id="cssSkill" class="skill-detail">
+        <h2>CSS</h2>
+        <h3>学習・制作経験</h3>
+        <p>Study Plannerやポートフォリオで、色や余白、レイアウトを調整し、画面サイズに応じた表示を作成しています。</p>
+      </div>
+      <div id="javascriptSkill" class="skill-detail">
+        <h2>JavaScript</h2>
+        <h3>学習・制作経験</h3>
+        <p>Study Plannerやポートフォリオで、クリック操作に応じた表示切り替えなど、Webページの動きを実装しています。</p>
+      </div>
+      <div id="githubSkill" class="skill-detail">
+        <h2>GitHub</h2>
+        <h3>学習・制作経験</h3>
+        <p>制作物のソースコードを管理・共有するために使用し、Gitによる変更履歴の管理とあわせて開発に活用しています。</p>
+      </div>
+    </div>
   </div>
 
   <script src="js/script.js"></script>

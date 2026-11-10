@@ -212,6 +212,76 @@ section {
   color: var(--text-color);
 }
 
+.skill-item {
+  padding: 12px 25px;
+  background-color: var(--pink);
+  border: 1px solid var(--main-color);
+  border-radius: 25px;
+  color: var(--text-color);
+  font: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover,
+.skill-item:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(118, 91, 85, 0.14);
+}
+
+.skill-detail-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(70, 50, 50, 0.65);
+}
+
+.skill-detail-modal.show {
+  display: flex;
+}
+
+.skill-detail-content {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 55px 45px 45px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.close-skill-detail {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  border: 0;
+  background: none;
+  color: var(--text-color);
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.skill-detail {
+  display: none;
+}
+
+.skill-detail h2 {
+  margin-bottom: 20px;
+}
+
+.skill-detail h3 {
+  margin: 20px 0 8px;
+}
+
+.skill-detail p {
+  line-height: 2;
+}
+
 /* Contact */
 #contact {
   background-color: var(--beige);
@@ -261,6 +331,10 @@ footer {
 
   nav a {
     margin: 0;
+  }
+
+  .skill-detail-content {
+    padding: 50px 20px 30px;
   }
 
   .hero {

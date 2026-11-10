@@ -9,11 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   };
 
-  if (document.readyState === "complete") {
-    hidePageLoader();
-  } else {
-    window.addEventListener("load", hidePageLoader, { once: true });
-  }
+  hidePageLoader();
 
   // ① スクロール連動メニュー
   const sections = document.querySelectorAll(

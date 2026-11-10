@@ -137,4 +137,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ⑥ スキル詳細
+  const skillDetailModal = document.getElementById("skillDetailModal");
+  const closeSkillDetail = document.getElementById("closeSkillDetail");
+
+  function hideSkillDetail() {
+    skillDetailModal?.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".skill-item[data-skill]").forEach(skill => {
+    skill.addEventListener("click", () => {
+      if (!skillDetailModal) return;
+
+      document.querySelectorAll(".skill-detail").forEach(detail => {
+        detail.style.display = "none";
+      });
+
+      const selectedDetail = document.getElementById(skill.dataset.skill + "Skill");
+      if (!selectedDetail) return;
+
+      selectedDetail.style.display = "block";
+      skillDetailModal.classList.add("show");
+      document.body.style.overflow = "hidden";
+      closeSkillDetail?.focus();
+    });
+  });
+
+  closeSkillDetail?.addEventListener("click", hideSkillDetail);
+
+  skillDetailModal?.addEventListener("click", event => {
+    if (event.target === skillDetailModal) {
+      hideSkillDetail();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      hideSkillDetail();
+    }
+  });
+
 });
