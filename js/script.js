@@ -150,5 +150,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
   });
+  // ⑥ 作品詳細画面
+  const projectModal = document.getElementById("projectModal");
+  const closeProjectModal = document.getElementById("closeProjectModal");
 
+  function openProject(projectName) {
+    if (!projectModal) return;
+
+    document.querySelectorAll(".project-content").forEach(content => {
+      content.style.display = "none";
+    });
+
+    const selectedProject =
+      document.getElementById(projectName + "Project");
+
+    if (!selectedProject) return;
+
+    selectedProject.style.display = "block";
+    projectModal.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeProject() {
+    if (!projectModal) return;
+
+    projectModal.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+
+  document.querySelectorAll(".work-card[data-project]").forEach(card => {
+
+    card.addEventListener("click", () => {
+      openProject(card.dataset.project);
+    });
+
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProject(card.dataset.project);
+      }
+    });
+
+  });
+
+  if (closeProjectModal) {
+    closeProjectModal.addEventListener("click", closeProject);
+  }
+
+  if (projectModal) {
+    projectModal.addEventListener("click", event => {
+      if (event.target === projectModal) {
+        closeProject();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeProject();
+    }
+  });
 });

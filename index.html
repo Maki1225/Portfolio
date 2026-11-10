@@ -52,7 +52,7 @@
       </div>
 
       <!-- MY HISTORY -->
-      <div id="history" class="history-section">
+      < id="history" class="history-section">
         <h3>MY HISTORY</h3>
         <p class="history-subtitle">
           My journey of learning and creating
@@ -121,66 +121,7 @@
           </div>
 
         </div>
-      </div>
-
-      <!-- 高専入学 -->
-      <div class="timeline-item" data-period="3">
-        <span class="timeline-date">2025年4月</span>
-
-        <div class="timeline-content">
-          <span>START</span>
-          <h4>高専入学</h4>
-          <p>
-            高専に入学し、プログラミングや電子工作など、
-            さまざまな技術の学習を始める。
-          </p>
         </div>
-      </div>
-
-      <!-- コース進級 -->
-      <div class="timeline-item" data-period="1">
-        <span class="timeline-date">2026年4月</span>
-
-        <div class="timeline-content">
-          <span>STEP UP</span>
-          <h4>知能情報コース 進級</h4>
-          <p>
-            知能情報コースに進級し、AIやデータ分析などの
-            専門的な学習を開始。
-          </p>
-        </div>
-      </div>
-
-      <!-- Python -->
-      <div class="timeline-item" data-period="1">
-        <span class="timeline-date">2026年5月</span>
-
-        <div class="timeline-content">
-          <span>PYTHON</span>
-          <h4>学内IS</h4>
-          <p>
-            Pythonを使用して音声データを分析し、
-            音の良否を判定するAIアプリを制作。
-          </p>
-        </div>
-      </div>
-
-      <!-- Web制作 -->
-      <div class="timeline-item" data-period="4">
-        <span class="timeline-date">2026年10月</span>
-
-        <div class="timeline-content">
-          <span>WEB DEVELOPMENT</span>
-          <h4>総合課題実験実習</h4>
-          <p>
-            HTML、CSS、JavaScriptなどを使用して、
-            課題や予定を管理するWebアプリを制作。
-          </p>
-        </div>
-      </div>
-
-      </div>
-      </div>
     </section>
 
     <!-- 制作物 -->
@@ -217,20 +158,22 @@
       <!-- 作品一覧 -->
       <div class="works-container">
 
-        <div class="work-card" data-category="python">
+        <!-- PROJECT 01 -->
+        <div class="work-card" data-category="python" data-project="audio" role="button" tabindex="0">
 
           <div class="work-image">
             PROJECT 01
           </div>
 
           <div class="work-info">
-            <h3>PROJECT 01</h3>
-            <p>作品の説明をここに記載します。</p>
+            <h3>音声良否判定AI</h3>
+            <p>Pythonを使用した音声の良否判定アプリ。</p>
           </div>
 
         </div>
 
-        <div class="work-card" data-category="c++">
+        <!-- PROJECT 02 -->
+        <div class="work-card" data-category="c++" data-project="project02" role="button" tabindex="0">
 
           <div class="work-image">
             PROJECT 02
@@ -292,7 +235,35 @@
   <button id="backToTop" aria-label="ページトップに戻る">
     ↑
   </button>
+  <!-- プロジェクト詳細画面 -->
+  <div id="projectModal" class="project-modal">
 
+    <div class="project-modal-content">
+
+      <button id="closeProjectModal" class="close-project-modal" aria-label="閉じる">
+        ×
+      </button>
+
+      <!-- PROJECT 01 -->
+      <div id="audioProject" class="project-content">
+        <h2>音声良否判定AI</h2>
+        <p>
+          Pythonを使用して音声データを分析し、
+          音の良否を判定するアプリです。
+        </p>
+      </div>
+
+      <!-- PROJECT 02 -->
+      <div id="project02Project" class="project-content">
+        <h2>PROJECT 02</h2>
+        <p>
+          ここに2つ目の作品の詳しい説明を記載します。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
   <!-- 画像拡大表示 -->
   <div id="imageModal" class="image-modal">
 
