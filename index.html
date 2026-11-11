@@ -262,6 +262,17 @@
   <button id="backToTop" aria-label="ページトップに戻る">
     ↑
   </button>
+
+  <!-- 画像拡大表示 -->
+  <div id="imageModal" class="image-modal" aria-modal="true" role="dialog" aria-label="画像拡大表示">
+    <button id="prevImageBtn" class="gallery-nav prev" type="button" aria-label="前の画像">‹</button>
+    <div class="image-modal-panel">
+      <button id="closeModal" class="close-image-modal" type="button" aria-label="閉じる">×</button>
+      <img id="modalImage" src="" alt="拡大画像">
+    </div>
+    <button id="nextImageBtn" class="gallery-nav next" type="button" aria-label="次の画像">›</button>
+  </div>
+
   <!-- プロジェクト詳細画面 -->
   <div id="projectModal" class="project-modal">
 

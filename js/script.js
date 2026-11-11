@@ -180,9 +180,85 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ⑦ 詳細画面の画像を拡大表示
+  const imageModal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+  const prevImageBtn = document.getElementById("prevImageBtn");
+  const nextImageBtn = document.getElementById("nextImageBtn");
+
+  if (imageModal && modalImage && closeModal) {
+    let imageGallery = [];
+    let currentImageIndex = 0;
+
+    function updateImageModal() {
+      const total = imageGallery.length;
+      if (!total) return;
+
+      const image = imageGallery[currentImageIndex];
+      modalImage.src = image.src;
+      modalImage.alt = image.alt;
+
+      prevImageBtn?.toggleAttribute("disabled", total <= 1);
+      nextImageBtn?.toggleAttribute("disabled", total <= 1);
+    }
+
+    function openImageModal(images, index) {
+      imageGallery = images;
+      currentImageIndex = index;
+      updateImageModal();
+      imageModal.classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function hideImageModal() {
+      imageModal.classList.remove("show");
+      if (!projectModal || !projectModal.classList.contains("show")) {
+        document.body.style.overflow = "";
+      }
+    }
+
+    document.querySelectorAll(".project-gallery").forEach(gallery => {
+      const images = Array.from(gallery.querySelectorAll("img"));
+
+      images.forEach((img, index) => {
+        img.style.cursor = "zoom-in";
+        img.addEventListener("click", () => {
+          openImageModal(images, index);
+        });
+      });
+    });
+
+    prevImageBtn?.addEventListener("click", () => {
+      if (!imageGallery.length) return;
+      currentImageIndex = (currentImageIndex - 1 + imageGallery.length) % imageGallery.length;
+      updateImageModal();
+    });
+
+    nextImageBtn?.addEventListener("click", () => {
+      if (!imageGallery.length) return;
+      currentImageIndex = (currentImageIndex + 1) % imageGallery.length;
+      updateImageModal();
+    });
+
+    closeModal.addEventListener("click", hideImageModal);
+
+    imageModal.addEventListener("click", event => {
+      if (event.target === imageModal) {
+        hideImageModal();
+      }
+    });
+  }
+
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
       closeProject();
+      if (imageModal) {
+        imageModal.classList.remove("show");
+      }
+      if (!projectModal || !projectModal.classList.contains("show")) {
+        document.body.style.overflow = "";
+      }
     }
   });
 });
