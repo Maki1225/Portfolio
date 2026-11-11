@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><clipPath id="iconClip"><circle cx="256" cy="256" r="248"/></clipPath></defs><rect width="512" height="512" fill="#f5f0f5"/><circle cx="256" cy="256" r="248" fill="#f5f0f5" stroke="#e2d2e1" stroke-width="14"/><image href="profile-icon.png" width="512" height="512" clip-path="url(#iconClip)"/></svg>
