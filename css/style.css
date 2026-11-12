@@ -840,11 +840,12 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 52px;
 }
 
 .image-modal img {
-  max-width: min(90vw, 900px);
-  max-height: 90vh;
+  max-width: min(calc(100vw - 48px), 900px);
+  max-height: calc(100vh - 100px);
   object-fit: contain;
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -865,10 +866,10 @@ html {
 
 .close-image-modal {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  border: none;
-  background: rgba(255, 255, 255, 0.15);
+  top: 0;
+  right: 0;
+  border: 2px solid #fff;
+  background: #3b3033;
   color: #fff;
   width: 42px;
   height: 42px;
@@ -876,6 +877,18 @@ html {
   font-size: 32px;
   line-height: 1;
   cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.close-image-modal:hover {
+  background: #765b55;
+  transform: scale(1.08);
+}
+
+.close-image-modal:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
 }
 
 .gallery-nav {
