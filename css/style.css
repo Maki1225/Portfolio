@@ -246,6 +246,16 @@ nav a.active {
   margin-bottom: 12px;
 }
 
+.profile-text ul {
+  display: inline-block;
+  padding-left: 1.25em;
+  text-align: left;
+}
+
+.profile-text li + li {
+  margin-top: 6px;
+}
+
 /* =========================
    MY CREATIVE HISTORY
 ========================= */
