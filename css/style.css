@@ -510,9 +510,10 @@ nav a.active {
   display: inline-block;
   padding: 12px 35px;
   background-color: var(--main-color);
-  color: var(--white);
+  color: #60463f;
   text-decoration: none;
   border-radius: 25px;
+  font-weight: 700;
   transition: 0.3s;
 }
 
@@ -521,7 +522,8 @@ nav a.active {
 }
 
 .contact-button:hover {
-  background-color: var(--sub-color);
+  background-color: #8c5863;
+  color: var(--white);
 }
 
 /* =========================
@@ -997,13 +999,13 @@ html {
   font-size: 18px;
 }
 
-.project-content a {
+.project-content a:not(.contact-button) {
   color: var(--sub-color);
   text-decoration: underline;
   transition: color 0.3s;
 }
 
-.project-content a:hover {
+.project-content a:not(.contact-button):hover {
   color: var(--main-color);
 }
 
