@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブラックジャック</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="game-container">
+    <header>
+      <p class="subtitle">CARD GAME</p>
+      <h1>BLACKJACK</h1>
+      <p>21に近づけよう！</p>
+    </header>
+
+    <section id="startScreen" class="panel">
+      <h2>難易度を選択</h2>
+      <div class="difficulty-buttons">
+        <button data-level="初級">初級</button>
+        <button data-level="中級">中級</button>
+        <button data-level="上級">上級</button>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="panel" hidden>
+      <div class="status">
+        <span id="levelLabel">難易度：中級</span>
+        <span id="gameCount">第1ゲーム</span>
+      </div>
+
+      <section class="hand">
+        <h2>ディーラー</h2>
+        <div id="dealerCards" class="cards"></div>
+        <p id="dealerScore">合計：？</p>
+      </section>
+
+      <section class="hand">
+        <h2>あなた</h2>
+        <div id="playerCards" class="cards"></div>
+        <p id="playerScore">合計：0</p>
+      </section>
+
+      <p id="message" class="message">カードを引いてください</p>
+
+      <div id="gameButtons" class="game-buttons">
+        <button id="hitButton">ヒット</button>
+        <button id="standButton">スタンド</button>
+      </div>
+
+      <div id="resultButtons" class="game-buttons" hidden>
+        <button id="againButton">もう一度遊ぶ</button>
+        <button id="homeButton" class="secondary">難易度選択へ</button>
+      </div>
+
+      <section class="stats">
+        <h2>戦績</h2>
+        <div class="stats-grid">
+          <p>勝ち <strong id="wins">0</strong></p>
+          <p>負け <strong id="losses">0</strong></p>
+          <p>引き分け <strong id="draws">0</strong></p>
+          <p>連勝 <strong id="streak">0</strong></p>
+          <p>勝率 <strong id="winRate">0%</strong></p>
+        </div>
+      </section>
+    </section>
+
+    <footer>BLACKJACK GAME</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
